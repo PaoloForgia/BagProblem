@@ -2,13 +2,13 @@ import pulp as p
 
 problem = p.LpProblem("Bag Problem", p.LpMaximize)
 
-x1 = p.LpVariable("Object 1", lowBound=0, upBound=1, cat=p.LpInteger)
-x2 = p.LpVariable("Object 2", lowBound=0, upBound=1, cat=p.LpInteger)
-x3 = p.LpVariable("Object 3", lowBound=0, upBound=1, cat=p.LpInteger)
-x4 = p.LpVariable("Object 4", lowBound=0, upBound=1, cat=p.LpInteger)
-x5 = p.LpVariable("Object 5", lowBound=0, upBound=1, cat=p.LpInteger)
-x6 = p.LpVariable("Object 6", lowBound=0, upBound=1, cat=p.LpInteger)
-x7 = p.LpVariable("Object 7", lowBound=0, upBound=1, cat=p.LpInteger)
+x1 = p.LpVariable("Object 1", cat="Binary")
+x2 = p.LpVariable("Object 2", cat="Binary")
+x3 = p.LpVariable("Object 3", cat="Binary")
+x4 = p.LpVariable("Object 4", cat="Binary")
+x5 = p.LpVariable("Object 5", cat="Binary")
+x6 = p.LpVariable("Object 6", cat="Binary")
+x7 = p.LpVariable("Object 7", cat="Binary")
 
 # Objective function
 problem += 7000 * x1 + 6500 * x2 + 8250 * x3 + 7125 * x4 + 3500 * x5 + 2400 * x6 + 3100 * x7
